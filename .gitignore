@@ -4,4 +4,5 @@ distribution
 .DS_Store
 distribution.crx
 distribution.pem
+distribution.zip
 .env

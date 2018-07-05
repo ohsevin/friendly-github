@@ -1,12 +1,14 @@
 {
 	"name": "Friendly GitHub",
-	"version": "0.0.0",
+	"short_name": "FGH",
+	"version": "0.0.1",
 	"description": "Makes GitHub a better Social Network",
 	"homepage_url": "https://github.com/hermanya/friendly-github",
 	"manifest_version": 2,
 	"minimum_chrome_version": "58",
 	"applications": {
 		"gecko": {
+			"id": "{01c3b583-c5ce-42f6-9c43-a2dd6f767230}",
 			"strict_min_version": "55.0"
 		}
 	},

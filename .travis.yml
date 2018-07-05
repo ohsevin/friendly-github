@@ -2,13 +2,14 @@ language: node_js
 node_js:
   - 'node'
 env:
-  - EXTENSION_ID=lcfempbcajbebbkbhmbolpeheihejaba
+  - EXTENSION_ID=phnhnfjginnlmbjlcdnjoochcceapfjb
 deploy:
   - provider: script
     skip_cleanup: true
     script: npm run release
     on:
-      tags: true
+      branch: master
+      # tags: true
   - provider: script
     skip_cleanup: true
     script: npm run release

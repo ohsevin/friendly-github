@@ -1,5 +1,7 @@
-# <img src="source/icon.png" width="45" align="left"> Friendly GitHub
+# <img src="source/icon.png" width="45" align="left"> Friendly GitHub [![Build Status](https://travis-ci.org/Hermanya/friendly-github.svg?branch=master)](https://travis-ci.org/Hermanya/friendly-github)
 
+[link-cws]: https://chrome.google.com/webstore/detail/friendly-github/phnhnfjginnlmbjlcdnjoochcceapfjb "Version published on Chrome Web Store"
+[link-amo]: https://addons.mozilla.org/en-US/firefox/addon/friendly-github-/ "Version published on Mozilla Add-ons"
 [link-travis]: https://travis-ci.org/hermanya/friendly-github
 
 > Browser extension that makes GitHub a better Social Network
@@ -12,11 +14,13 @@ GitHub Enterprise is also supported. More info in the options.
 
 ---
 
-
 ## Install
 
 I have not published this extension anywhere yet. You'll have to either install it from sources, or [subscribe to this issue for Chrome](https://github.com/Hermanya/friendly-github/issues/1) and [this for Firefox](https://github.com/Hermanya/friendly-github/issues/2).
 
+- [**Chrome** extension][link-cws] [<img valign="middle" src="https://img.shields.io/chrome-web-store/v/phnhnfjginnlmbjlcdnjoochcceapfjb.svg?label=%20">][link-cws]
+- [**Firefox** add-on][link-amo] [<img valign="middle" src="https://img.shields.io/amo/v/friendly-github.svg?label=%20">][link-amo]
+- **Opera** extension: Use [this Opera extension](https://addons.opera.com/en/extensions/details/download-chrome-extension-9/) to install the Chrome version.
 
 ## Highlights
 
@@ -72,10 +76,7 @@ I have not published this extension anywhere yet. You'll have to either install 
 - Suggest similar user profiles
 - Show stargazers you know
 
-
 And [many more…](source/content.css)
-
-
 
 ## Customization
 
@@ -83,11 +84,9 @@ Most features can be disabled if they are JavaScript-based *(Experimental)* and 
 
 We're happy to receive suggestions and contributions, but be aware this is a highly opinionated project. There's a very high bar for adding options. Users will always disagree with something. That being said, we're open to discussing things. If something doesn't make the cut, you can [build your customized Friendly GitHub locally](contributing.md#workflow), rather than installing it from the Chrome Store.
 
-
 ## Contribute
 
 See the [contribution guide](contributing.md) and join the [contributors](https://github.com/hermanya/friendly-github/graphs/contributors)!
-
 
 ## Related
 
@@ -106,7 +105,6 @@ See the [contribution guide](contributing.md) and join the [contributors](https:
 - [Refined Twitter](https://github.com/sindresorhus/refined-twitter) - Improves Twitter
 - [GitHub Issue Link Status](https://github.com/bfred-it/github-issue-link-status) - Colorize issue and PR links to see their status (open, closed, merged)
 - [GitHub Follow](https://github.com/staff0rd/github-follow-extension) - Follow file renames on GitHub
-
 
 ## License
 
