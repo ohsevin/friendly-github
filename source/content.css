@@ -4,3 +4,114 @@
 	--github-gray-background: #fafbfc;
 	--github-gray-text: #6a737d;
 }
+
+/* STYLES FOR AVATARS REFINED GITHUB ADDS TO REACTIONS */
+.reaction-summary-item {
+	padding-right: 0.7em !important;
+	padding-left: 0.7em !important;
+}
+.reaction-summary-item.user-has-reacted {
+	--background: #f2f8fa;
+}
+.reaction-summary-item a {
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	border-radius: 3px;
+	margin-top: -0.3em;
+	margin-left: -0.2em;
+	vertical-align: middle;
+	background: #efefef; /* Placeholder before the images load */
+	box-shadow: 0 0 0 2px var(--background, #fff);
+	font-size: 10px; /* Base sizer */
+	transition: margin-left 0.2s;
+}
+.reaction-summary-item a:first-of-type {
+	margin-left: 0.5em;
+}
+.review-comment .reaction-summary-item a {
+	font-size: 9px;
+}
+.discussion-post .reaction-summary-item a {
+	margin-top: -1px;
+}
+
+/* This image will start at height:0 and will expand once loaded, covering the gray placeholder */
+.reaction-summary-item img {
+	max-width: 100%;
+	border-radius: inherit;
+	background-color: var(--background);
+}
+
+/* Overlap reaction avatars when there are 5+ types of reactions */
+.rgh-reactions-near-limit .reaction-summary-item:not(:hover) a:not(:first-of-type) {
+	margin-left: -12px;
+}
+
+/* Hide reaction popover text */
+.reaction-popover-form.js-pick-reaction span.js-reaction-description,
+.reaction-popover-form.js-pick-reaction .dropdown-divider {
+	display: none;
+}
+
+/* Increase reaction popover hitbox area to avoid involuntary closes */
+.reaction-popover-form::before {
+	content: '';
+	position: absolute;
+	top: -20px;
+	right: -10px;
+	bottom: -20px;
+	left: -10px;
+	z-index: -1;
+}
+
+/* Center reactions popup and its triangle */
+.add-reaction-popover,
+.add-reaction-popover::before,
+.add-reaction-popover::after {
+	right: auto !important;
+	left: 50% !important;
+	transform: translate(-50%) !important;
+}
+.add-reaction-popover {
+	animation-name: rgh-scale-in-centered !important;
+}
+
+@keyframes rgh-scale-in-centered {
+	0% {
+		transform: translate(-50%) scale(0.5);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translate(-50%);
+	}
+}
+
+/*
+Undo reactions popup centering in split file view on the right.
+The popup is clipped on the right otherwise.
+The selector considers
+- Unified view (skipped)
+- Split view with comment on the left only (skipped)
+- Split view with comment on the right only
+- Split view with comments on the left and right
+*/
+td.js-line-comments:last-child .timeline-comment-actions .add-reaction-popover {
+	left: -15px !important;
+}
+td.js-line-comments:last-child .timeline-comment-actions .add-reaction-popover::before,
+td.js-line-comments:last-child .timeline-comment-actions .add-reaction-popover::after {
+	left: 140px !important;
+}
+
+/* Never show loading spinner for reactions */
+.js-reaction-popover-container .reaction-popover-form .loading-spinner {
+	display: none !important;
+}
+
+/* Keep colored button when reaction popup is open */
+.dropdown-details[open] .timeline-comment-action {
+	opacity: 1;
+	color: #4078c0;
+}
