@@ -1,0 +1,7 @@
+node_modules
+yarn.lock
+distribution
+.DS_Store
+distribution.crx
+distribution.pem
+.env
