@@ -30,8 +30,8 @@ const getSuggestedUserCards = async () => {
 	return suggestedUserCards;
 };
 
+let runOnce = false;
 export default function () {
-	let runOnce = false;
 	delegate('[aria-label="Follow this person"]', 'click', async () => {
 		if (runOnce) {
 			return;

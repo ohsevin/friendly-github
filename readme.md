@@ -1,7 +1,7 @@
 # <img src="source/icon.png" width="45" align="left"> Friendly GitHub [![Build Status](https://travis-ci.org/Hermanya/friendly-github.svg?branch=master)](https://travis-ci.org/Hermanya/friendly-github)
 
 [link-cws]: https://chrome.google.com/webstore/detail/friendly-github/phnhnfjginnlmbjlcdnjoochcceapfjb "Version published on Chrome Web Store"
-[link-amo]: https://addons.mozilla.org/en-US/firefox/addon/friendly-github-/ "Version published on Mozilla Add-ons"
+[link-amo]: https://addons.mozilla.org/en-US/firefox/addon/friendly-github "Version published on Mozilla Add-ons"
 [link-travis]: https://travis-ci.org/hermanya/friendly-github
 
 > Browser extension that makes GitHub a better Social Network
