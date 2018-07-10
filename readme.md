@@ -27,20 +27,20 @@ I have not published this extension anywhere yet. You'll have to either install 
 <table>
 	<tr>
 		<th width="50%">
-			Show stargazers you know
+			Display stargazers you know
 		</th>
 		<th width="50%">
-			Show followers you know
+			Display followers you know
 		</th>
 	</tr>
 	<tr><!-- Prevent zebra stripes --></tr>
 	<tr>
 		<td>
-			<img src="https://user-images.githubusercontent.com/2906365/41952167-901fad48-799c-11e8-97d1-70d363629b86.png">
+			<img src="https://user-images.githubusercontent.com/2906365/42515985-09dba7ac-842b-11e8-8832-8b2c058361b3.png">
 		</td>
 		<td>
 			<img
-			src="https://user-images.githubusercontent.com/2906365/42009293-b1503f62-7a57-11e8-88f5-9c2fb3651a14.png">
+			src="https://user-images.githubusercontent.com/2906365/42515984-09c57392-842b-11e8-9a30-5a33f8e7f944.png">
 		</td>
 	</tr>
 </table>
@@ -51,7 +51,7 @@ I have not published this extension anywhere yet. You'll have to either install 
 			Reaction avatars showing <i>who</i> reacted to a comment
 		</th>
 		<th width="50%">
-			TBD
+			Show suggested profiles
 		</th>
 	</tr>
 	<tr><!-- Prevent zebra stripes --></tr>
@@ -61,7 +61,7 @@ I have not published this extension anywhere yet. You'll have to either install 
 		</td>
 		<td>
 			<img
-			src="">
+			src="https://user-images.githubusercontent.com/2906365/42515983-09b3a9e6-842b-11e8-8c7f-84102468c2f4.png">
 		</td>
 	</tr>
 </table>
