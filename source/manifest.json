@@ -8,7 +8,7 @@
 	"minimum_chrome_version": "58",
 	"applications": {
 		"gecko": {
-			"id": "{01c3b583-c5ce-42f6-9c43-a2dd6f767230}",
+			"id": "{073711a2-ea6d-49f2-98b6-0d7ea340c06f}",
 			"strict_min_version": "55.0"
 		}
 	},
