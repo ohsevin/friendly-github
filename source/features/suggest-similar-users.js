@@ -19,7 +19,7 @@ const rerenderUserCard = card => {
 };
 
 const getSuggestedUserCards = async () => {
-	const url = `${location.origin}/${getCleanPathname()}/followers`;
+	const url = `${location.origin}/${getCleanPathname()}/following`;
 	const response = await fetch(url, {credentials: 'same-origin'});
 	const dom = domify(await response.text());
 	const allUserCards = [...dom.querySelectorAll('.follow-list-item')];
