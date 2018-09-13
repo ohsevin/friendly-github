@@ -1,7 +1,7 @@
 import {h} from 'dom-chef';
 import select from 'select-dom';
 import domify from '../libs/domify';
-import {getUsername, groupBy} from '../libs/utils';
+import {getLoggedInUsername, groupBy} from '../libs/utils';
 
 const storageKey = 'cachedNames';
 
@@ -34,7 +34,7 @@ export default async () => {
 		return;
 	}
 
-	const myUsername = getUsername();
+	const myUsername = getLoggedInUsername();
 	const cache = await getCachedUsers();
 
 	const selector = `.js-discussion .author:not(.friendly-github-fullname):not([href^="/apps/"])`;

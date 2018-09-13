@@ -51,7 +51,8 @@ export const isFeatureEnabled = async featureName => {
 	return disabledFeatures.includes(featureName);
 };
 
-export const getUsername = onetime(() => select('meta[name="user-login"]').getAttribute('content'));
+export const getLoggedInUsername = onetime(() => select('meta[name="user-login"]').getAttribute('content'));
+export const getProfileUsername = () => select('meta[property="profile:username"]').getAttribute('content');
 
 export const groupBy = (iterable, grouper) => {
 	const map = {};

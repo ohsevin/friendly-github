@@ -3,14 +3,15 @@ import {h} from 'dom-chef';
 import select from 'select-dom';
 import domLoaded from 'dom-loaded';
 
+import * as pageDetect from './libs/page-detect';
+import {safeElementReady, enableFeature, safeOnAjaxedPages, injectCustomCSS} from './libs/utils';
+
 import addReactionParticipants from './features/reactions-avatars';
 import showRealNames from './features/show-names';
 import showStargazersYouKnow from './features/show-stargazers-you-know';
 import showFollowersYouKnow from './features/show-followers-you-know';
 import suggestSimilarUsers from './features/suggest-similar-users';
-
-import * as pageDetect from './libs/page-detect';
-import {safeElementReady, enableFeature, safeOnAjaxedPages, injectCustomCSS} from './libs/utils';
+import followsYou from './features/follows-you';
 
 // Add globals for easier debugging
 window.select = select;
@@ -71,6 +72,7 @@ function ajaxedPagesHandler() {
 	if (pageDetect.isUserProfile()) {
 		enableFeature(showFollowersYouKnow);
 		enableFeature(suggestSimilarUsers);
+		enableFeature(followsYou);
 	}
 }
 

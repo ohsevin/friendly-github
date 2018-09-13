@@ -1,13 +1,13 @@
 import debounce from 'debounce-fn';
 import select from 'select-dom';
 import {h} from 'dom-chef';
-import {getUsername, flatZip} from '../libs/utils';
+import {getLoggedInUsername, flatZip} from '../libs/utils';
 
 const arbitraryAvatarLimit = 36;
 const approximateHeaderLength = 3; // Each button header takes about as much as 3 avatars
 
 function getParticipants(container) {
-	const currentUser = getUsername();
+	const currentUser = getLoggedInUsername();
 	return container.getAttribute('aria-label')
 		.replace(/ reacted with.*/, '')
 		.replace(/,? and /, ', ')

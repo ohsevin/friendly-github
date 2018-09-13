@@ -16,8 +16,12 @@ export default async endpoint => {
 	}
 	const api = location.hostname === 'github.com' ? 'https://api.github.com/' : `${location.origin}/api/`;
 	const response = await fetch(api + endpoint, {headers});
-	const json = await response.json();
-
+	let json;
+	try {
+		json = await response.json();
+	} catch (e) {
+		json = response.statusText;
+	}
 	if (response.ok) {
 		cache.set(endpoint, json);
 	} else if (json.message.includes('API rate limit exceeded')) {
@@ -29,9 +33,10 @@ export default async endpoint => {
 			'Friendly GitHub couldn’t use GitHub’s API because the token seems to be incorrect or expired. Update it in the options.'
 		);
 	} else {
-		console.error(
-			'Friendly GitHub wasn’t able to fetch GitHub’s API.',
-			personalToken ? 'Ensure that your token has access to this repo.' : 'Maybe adding a token in the options will fix this issue.',
+		console.warn(
+			'Friendly GitHub got a negative response from GitHub’s API. This may be the expected behaviour for requests with No Content.',
+			personalToken ? 'If you believe it is not expected, ensure that your token is properly configured.' :
+				'Maybe adding a token in the options will fix this issue.',
 			'\n',
 			JSON.stringify(json, null, '\t')
 		);

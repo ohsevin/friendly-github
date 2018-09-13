@@ -2,7 +2,7 @@ import {h} from 'dom-chef';
 import select from 'select-dom';
 import domify from '../libs/domify';
 import {getCleanPathname} from '../libs/page-detect';
-import {getUsername} from '../libs/utils';
+import {getLoggedInUsername} from '../libs/utils';
 
 const extractUserData = element => {
 	const image = element.querySelector('img');
@@ -34,25 +34,20 @@ const renderAvatar = ({link, description, avatar}) => (
 	</a>
 );
 
-const getHeading = stargazers =>
-	stargazers.length === 1 ?
-		`Follower you know` :
-		`${stargazers.length} Followers you know`;
-
 export default async () => {
-	if (getCleanPathname().startsWith(getUsername())) {
-		return;
-	}
-	const stargazers = await fetchFollowersYouKnow();
-	if (stargazers.length === 0) {
+	if (getCleanPathname().startsWith(getLoggedInUsername())) {
 		return;
 	}
 	const container = select('[itemtype="http://schema.org/Person"]');
 	if (!container) {
 		return;
 	}
+	const stargazers = await fetchFollowersYouKnow();
+	if (stargazers.length === 0) {
+		return;
+	}
 	container.append(<div class="border-top py-3 clearfix">
-		<h2 class="mb-1 h4">{getHeading(stargazers)}</h2>
+		<h2 class="mb-1 h4">Followers you know</h2>
 		{stargazers.map(renderAvatar)}
 	</div>);
 };
