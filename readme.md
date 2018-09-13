@@ -25,10 +25,10 @@ GitHub Enterprise is also supported. More info in the options.
 <table>
 	<tr>
 		<th width="50%">
-			Display stargazers you know
+			See stargazers you know
 		</th>
 		<th width="50%">
-			Display followers you know
+			See followers you know
 		</th>
 	</tr>
 	<tr><!-- Prevent zebra stripes --></tr>
@@ -49,7 +49,7 @@ GitHub Enterprise is also supported. More info in the options.
 			Reaction avatars showing <i>who</i> reacted to a comment
 		</th>
 		<th width="50%">
-			Show suggested profiles
+			See suggested profiles
 		</th>
 	</tr>
 	<tr><!-- Prevent zebra stripes --></tr>
@@ -63,6 +63,29 @@ GitHub Enterprise is also supported. More info in the options.
 		</td>
 	</tr>
 </table>
+
+<table>
+	<tr>
+		<th width="50%">
+			See if a person is following you
+		</th>
+		<th width="50%">
+			TBD
+		</th>
+	</tr>
+	<tr><!-- Prevent zebra stripes --></tr>
+	<tr>
+		<td>
+			<img src="https://user-images.githubusercontent.com/2906365/45518390-491a7380-b77f-11e8-8bda-bda43b263caa.png">
+		</td>
+		<td>
+			<img/>
+		</td>
+	</tr>
+</table>
+
+
+
 
 ### More info at a glance
 
