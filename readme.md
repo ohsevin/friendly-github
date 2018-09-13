@@ -16,8 +16,6 @@ GitHub Enterprise is also supported. More info in the options.
 
 ## Install
 
-I have not published this extension anywhere yet. You'll have to either install it from sources, or [subscribe to this issue for Chrome](https://github.com/Hermanya/friendly-github/issues/1) and [this for Firefox](https://github.com/Hermanya/friendly-github/issues/2).
-
 - [**Chrome** extension][link-cws] [<img valign="middle" src="https://img.shields.io/chrome-web-store/v/phnhnfjginnlmbjlcdnjoochcceapfjb.svg?label=%20">][link-cws]
 - [**Firefox** add-on][link-amo] [<img valign="middle" src="https://img.shields.io/amo/v/friendly-github.svg?label=%20">][link-amo]
 - **Opera** extension: Use [this Opera extension](https://addons.opera.com/en/extensions/details/download-chrome-extension-9/) to install the Chrome version.
