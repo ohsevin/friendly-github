@@ -40,7 +40,6 @@
 .reaction-summary-item img {
 	max-width: 100%;
 	border-radius: inherit;
-	background-color: var(--background);
 }
 
 /* Overlap reaction avatars when there are 5+ types of reactions */
